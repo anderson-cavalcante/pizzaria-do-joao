@@ -1,0 +1,65 @@
+import mysql.connector
+import os
+
+
+def pizzaria():
+    print('================================================================')
+    print('             ##     PIZZARIA DO JOAO    ##')
+    print('================================================================')
+
+
+class Funcionario:
+    def __init__(self, usuario, senha):
+        self.usuario = usuario
+        self.senha = senha
+
+
+pizzaria()
+usuario1 = input('VOCÊ TEM UM USUARIO ? [s]/[n]')
+if usuario1 == 'n' :
+    print('SEJA BEM VINDO FUNCIONARIO...')
+    usuario = input('CADASTRAR  USUARIO --> ')
+    os.system('cls')
+    pizzaria()
+    senha = input('CADASTRAR SENHA --> ')
+
+else:
+    usuario1 == 's'
+    print('DIGITE SEU USUARIO E SENHA : ') 
+    Usuario_Existente = input('DIGITE SEU USUARIO: ')   
+    Senha_Existente = input('DIGITE SUA SENHA: ')
+
+os.system('cls')
+pizzaria()
+
+print('    ##CARDÁPIO DIGITAL PIZZARIA DO JOAO##      ')
+print('')
+print('pizza g ja acompanha refigerante de 2L'                           )
+print('')
+
+print('pizzas           (m)      (g)           refrigerantes    2l               ')
+print('calabreza -      20.00     40.00        cocacola-        10.00            ')
+print('quatro queijos-  20.00     40.00        sprite -         8.00             ')
+print('portuguesa -     20.00     40.00        fanta laranja-   8.00             ')
+print('mussarela -      20.00     40.00        kuat-            8.00             ')
+
+sabor_escolhido1 = 20.00
+refri_escolhido1 = 8.00
+cliente = input('qual o seu nome? ') 
+
+
+
+pizza_sabores = input('qual pizza você vai escolher ? [m] ou [g]')
+if pizza_sabores == 'm':
+    sabor_escolhido = input('qual sabor você escolhe ? ')
+    refri_escolhido = input('qual o sabor do refrigerante? ')
+    total = sabor_escolhido1 + refri_escolhido1
+    print(f'o {cliente} escolheu o tamanho {pizza_sabores} e o sabor {sabor_escolhido} e o refrigenrante {refri_escolhido}')
+    print(f'total a pagar {total}')
+else:
+    pizza_sabores == 'g'
+    sabor_escolhido = input('qual sabor você escolhe ? ')
+    refri_escolhido = input('qual o sabor do refrigerante? ')
+    total = 40.00
+    print(f'o {cliente} escolheu o tamanho {pizza_sabores} e o sabor {sabor_escolhido} e o refrigenrante {refri_escolhido}')
+    print(f'total a pagar {total}')
